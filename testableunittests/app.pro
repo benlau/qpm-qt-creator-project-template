@@ -6,7 +6,7 @@
 
 QT       += testlib qml
 
-TARGET = unittests
+TARGET = %{ProjectName}
 CONFIG   += console
 CONFIG   -= app_bundle
 
@@ -16,7 +16,7 @@ SOURCES += \
     main.cpp \
     tests.cpp
 
-DEFINES += SRCDIR=\\\"$$PWD/\\\"
+DEFINES += SRCDIR=\\\\\\"$$PWD/\\\\\\"
 
 include(vendor/vendor.pri)
 

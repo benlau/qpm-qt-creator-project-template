@@ -3,7 +3,7 @@
     "kind": "project",
     "id": "TestableUnitTests",
     "category": "H.Project",
-    "trDescription": "Creates a testable project with a qpm.json file.",
+    "trDescription": "Creates a unit test program that use Testable and qpm",
     "trDisplayName": "Testable Unit Test Project",
     "trDisplayCategory": "Other Project",
     "icon": "../consoleapplication.png",
