@@ -1,0 +1,143 @@
+{
+    "version": 1,
+    "kind": "project",
+    "id": "QF.QuickFluxProject",
+    "category": "F.Application",
+    "trDescription": "This template provides a starting point for writing a QuickFlux based application.",
+    "trDisplayName": "QuickFlux Application",
+    "trDisplayCategory": "Application",
+    "icon": "../guiapplication.png",
+    "enabled": "%{JS: [ %{Plugins} ].indexOf('QmlProjectManager') >= 0}",
+    "options":
+    [
+        { "key": "ProFileName", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}', 'pro')}" },
+        { "key": "MainQmlFileName", "value": "%{JS: Util.fileName('%{ProjectName}', 'qml')}" },
+        { "key": "QtQuickVersion", "value": "%{JS: %{QtVersion}.qtQuickVersion}" },
+        { "key": "QtQuickWindowVersion", "value": "%{JS: %{QtVersion}.qtQuickWindowVersion}" },
+        { "key": "UiSupport", "value": "%{JS: '%{QtQuickVersion}' !== '2.3' }" },
+        { "key": "IsUiFileInUse", "value": "%{JS: %{UiSupport} && %{QmlUiSplit} }" }
+    ],
+
+    "pages":
+    [
+        {
+            "trDisplayName": "Project Location",
+            "trShortTitle": "Location",
+            "typeId": "Project"
+        },
+        {
+            "trDisplayName": "QML Package Information",
+            "trShortTile" : "Package",
+            "typeId" : "Fields",
+            "data": [
+                {
+                    "name": "Package",
+                    "trDisplayName": "QML Package Name",
+                    "mandatory": true,
+                    "type": "LineEdit",
+                    "data": { "validator": "[a-zA-Z][a-zA-Z0-9]*" }
+                }
+            ]
+        },
+
+        {
+            "trDisplayName": "Project Management",
+            "trShortTitle": "Summary",
+            "typeId": "Summary"
+        }
+    ],
+    "generators":
+    [
+        {
+            "typeId": "File",
+            "data":
+            [
+                  {
+                    "source": "app.pro",
+                    "target": "%{ProFileName}",
+                    "openAsProject": true
+                  },
+                  {
+                    "source": "App/actions/ActionTypes.qml",
+                    "target": "%{Package}/actions/ActionTypes.qml"
+                  },
+                  {
+                    "source": "App/actions/AppActions.qml",
+                    "target": "%{Package}/actions/AppActions.qml"
+                  },
+                  {
+                    "source": "App/actions/qmldir",
+                    "target": "%{Package}/actions/qmldir"
+                  },
+                  {
+                    "source": "App/adapters/qmldir",
+                    "target": "%{Package}/adapters/qmldir"
+                  },
+                  {
+                    "source": "App/adapters/StoreAdapter.qml",
+                    "target": "%{Package}/adapters/StoreAdapter.qml"
+                  },
+                  {
+                    "source": "App/constants/Constants.qml",
+                    "target": "%{Package}/constants/Constants.qml"
+                  },
+                  {
+                    "source": "App/constants/qmldir",
+                    "target": "%{Package}/constants/qmldir"
+                  },
+                  {
+                    "source": "App/stores/MainStore.qml",
+                    "target": "%{Package}/stores/MainStore.qml"
+                  },
+                  {
+                    "source": "App/stores/qmldir",
+                    "target": "%{Package}/stores/qmldir"
+                  },
+                  {
+                    "source": "App/storeworkers/MainStoreWorker.qml",
+                    "target": "%{Package}/storeworkers/MainStoreWorker.qml"
+                  },
+                  {
+                    "source": "App/storeworkers/qmldir",
+                    "target": "%{Package}/storeworkers/qmldir"
+                  },
+                  {
+                    "source": "App/storeworkers/StoreWorker.qml",
+                    "target": "%{Package}/storeworkers/StoreWorker.qml"
+                  },
+                  {
+                    "source": "app.pri",
+                    "target": "%{ProjectName}.pri"
+                  },
+                  {
+                    "source": "app.qrc",
+                    "target": "%{ProjectName}.qrc"
+                  },
+                  {
+                    "source": "appview.cpp",
+                    "target": "appview.cpp"
+                  },
+                  {
+                    "source": "appview.h",
+                    "target": "appview.h"
+                  },
+                  {
+                    "source": "deployment.pri",
+                    "target": "deployment.pri"
+                  },
+                  {
+                    "source": "main.cpp",
+                    "target": "main.cpp"
+                  },
+                  {
+                    "source": "main.qml",
+                    "target": "main.qml"
+                  },
+                  {
+                    "source": "qpm.json",
+                    "target": "qpm.json"
+                  }
+           ]
+        }
+    ]
+}
