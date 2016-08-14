@@ -136,6 +136,10 @@
                   {
                     "source": "qpm.json",
                     "target": "qpm.json"
+                  },
+                  {
+                    "source": ".gitignore",
+                    "target": ".gitignore"
                   }
            ]
         }
