@@ -62,6 +62,10 @@
                 {
                     "source": "main.cpp",
                     "target": "main.cpp"
+                },
+                {
+                    "source": ".gitignore",
+                    "target": ".gitignore"
                 }
            ]
         }
