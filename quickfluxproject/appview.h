@@ -1,9 +1,11 @@
-#ifndef APPVIEW_H
-#define APPVIEW_H
+#pragma once
 
 #include <QObject>
 #include <QQmlApplicationEngine>
 #include <QJSValue>
+
+/* AppView is the bridge between Application(C++) and View(QML).
+ */
 
 class AppView : public QObject
 {
@@ -25,5 +27,3 @@ private:
     QQmlApplicationEngine m_engine;
 
 };
-
-#endif // APPVIEW_H
