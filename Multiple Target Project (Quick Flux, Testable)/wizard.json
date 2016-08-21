@@ -154,31 +154,28 @@
                 },
                 {
                     "source": "tests/unittests/app.pro",
-                    "target": "tests/unittests/app.pro"
+                    "target": "tests/%{ProjectName}unittests/%{ProjectName}unittests.pro",
+                    "openAsProject": true
                 },
                 {
                     "source": "tests/unittests/main.cpp",
-                    "target": "tests/unittests/main.cpp"
+                    "target": "tests/%{ProjectName}unittests/main.cpp"
                 },
                 {
                     "source": "tests/unittests/qmltests/tst_QmlTests.qml",
-                    "target": "tests/unittests/qmltests/tst_QmlTests.qml"
+                    "target": "tests/%{ProjectName}unittests/qmltests/tst_QmlTests.qml"
                 },
                 {
                     "source": "tests/unittests/qpm.json",
-                    "target": "tests/unittests/qpm.json"
-                },
-                {
-                    "source": "tests/unittests/quickfluxappunittests.pro",
-                    "target": "tests/unittests/quickfluxappunittests.pro"
+                    "target": "tests/%{ProjectName}unittests/qpm.json"
                 },
                 {
                     "source": "tests/unittests/tests.cpp",
-                    "target": "tests/unittests/tests.cpp"
+                    "target": "tests/%{ProjectName}unittests/tests.cpp"
                 },
                 {
                     "source": "tests/unittests/tests.h",
-                    "target": "tests/unittests/tests.h"
+                    "target": "tests/%{ProjectName}unittests/tests.h"
                 }
            ]
         }

@@ -5,7 +5,7 @@ CONFIG += c++11
 
 QT += quick qml multimedia
 
-include(%{ProjectName}.pri)
+include(%{ApplicationProjectName}.pri)
 
 SOURCES += main.cpp
 
