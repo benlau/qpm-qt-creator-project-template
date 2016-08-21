@@ -31,8 +31,8 @@
             "typeId" : "Fields",
             "data": [
                 {
-                    "name": "ApplicationName",
-                    "trDisplayName": "Application Name",
+                    "name": "ApplicationProjectName",
+                    "trDisplayName": "Application Project Name",
                     "mandatory": true,
                     "type": "LineEdit",
                     "data": { "validator": "[a-zA-Z][a-zA-Z0-9]*" }
@@ -59,115 +59,98 @@
             "typeId": "File",
             "data":
             [
-                 {
-                    "source": "app.pro",
-                    "target": "%{ProFileName}",
-                    "openAsProject": true
-                },
-                {
-                    "source": ".gitignore",
-                    "target": ".gitignore"
-                },
                 {
                     "source": ".gitignore",
                     "target": ".gitignore"
                 },
                 {
                     "source": "app/target/App/actions/ActionTypes.qml",
-                    "target": "app/{%ApplicationName}/%{Package}/actions/ActionTypes.qml"
+                    "target": "app/%{ApplicationProjectName}/%{Package}/actions/ActionTypes.qml"
                 },
                 {
                     "source": "app/target/App/actions/AppActions.qml",
-                    "target": "app/target/App/actions/AppActions.qml"
+                    "target": "app/%{ApplicationProjectName}/%{Package}/actions/AppActions.qml"
                 },
                 {
                     "source": "app/target/App/actions/qmldir",
-                    "target": "app/target/App/actions/qmldir"
-                },
-                {
-                    "source": "app/target/App/adapters",
-                    "target": "app/target/App/adapters"
+                    "target": "app/%{ApplicationProjectName}/%{Package}/actions/qmldir"
                 },
                 {
                     "source": "app/target/App/adapters/qmldir",
-                    "target": "app/target/App/adapters/qmldir"
+                    "target": "app/%{ApplicationProjectName}/%{Package}/adapters/qmldir"
                 },
                 {
                     "source": "app/target/App/adapters/StoreAdapter.qml",
-                    "target": "app/target/App/adapters/StoreAdapter.qml"
+                    "target": "app/%{ApplicationProjectName}/%{Package}/adapters/StoreAdapter.qml"
                 },
                 {
                     "source": "app/target/App/constants/Constants.qml",
-                    "target": "app/target/App/constants/Constants.qml"
+                    "target": "app/%{ApplicationProjectName}/%{Package}/constants/Constants.qml"
                 },
                 {
                     "source": "app/target/App/constants/qmldir",
-                    "target": "app/target/App/constants/qmldir"
+                    "target": "app/%{ApplicationProjectName}/%{Package}/constants/qmldir"
                 },
                 {
                     "source": "app/target/App/main.qml",
-                    "target": "app/target/App/main.qml"
+                    "target": "app/%{ApplicationProjectName}/%{Package}/main.qml"
                 },
                 {
                     "source": "app/target/App/stores/MainStore.qml",
-                    "target": "app/target/App/stores/MainStore.qml"
+                    "target": "app/%{ApplicationProjectName}/%{Package}/stores/MainStore.qml"
                 },
                 {
                     "source": "app/target/App/stores/qmldir",
-                    "target": "app/target/App/stores/qmldir"
+                    "target": "app/%{ApplicationProjectName}/%{Package}/stores/qmldir"
                 },
                 {
                     "source": "app/target/App/storeworkers/MainStoreWorker.qml",
-                    "target": "app/target/App/storeworkers/MainStoreWorker.qml"
+                    "target": "app/%{ApplicationProjectName}/%{Package}/storeworkers/MainStoreWorker.qml"
                 },
                 {
                     "source": "app/target/App/storeworkers/qmldir",
-                    "target": "app/target/App/storeworkers/qmldir"
+                    "target": "app/%{ApplicationProjectName}/%{Package}/storeworkers/qmldir"
                 },
                 {
                     "source": "app/target/App/storeworkers/StoreWorker.qml",
-                    "target": "app/target/App/storeworkers/StoreWorker.qml"
+                    "target": "app/%{ApplicationProjectName}/%{Package}/storeworkers/StoreWorker.qml"
                 },
                 {
                     "source": "app/target/app.pri",
-                    "target": "app/target/app.pri"
+                    "target": "app/%{ApplicationProjectName}/%{ApplicationProjectName}.pri"
                 },
                 {
                     "source": "app/target/app.pro",
-                    "target": "app/target/%{ProFileName}.pro",
+                    "target": "app/%{ApplicationProjectName}/%{ApplicationProjectName}.pro",
                     "openAsProject": true
                 },
                 {
                     "source": "app/target/app.qrc",
-                    "target": "app/target/app.qrc"
+                    "target": "app/%{ApplicationProjectName}/%{ApplicationProjectName}.qrc"
                 },
                 {
                     "source": "app/target/appview.cpp",
-                    "target": "app/target/appview.cpp"
+                    "target": "app/%{ApplicationProjectName}/appview.cpp"
                 },
                 {
                     "source": "app/target/appview.h",
-                    "target": "app/target/appview.h"
+                    "target": "app/%{ApplicationProjectName}/appview.h"
                 },
                 {
                     "source": "app/target/deployment.pri",
-                    "target": "app/target/deployment.pri"
+                    "target": "app/%{ApplicationProjectName}/deployment.pri"
                 },
                 {
                     "source": "app/target/main.cpp",
-                    "target": "app/target/main.cpp"
+                    "target": "app/%{ApplicationProjectName}/main.cpp"
                 },
                 {
                     "source": "app/target/main.qml",
-                    "target": "app/target/main.qml"
+                    "target": "app/%{ApplicationProjectName}/main.qml"
                 },
                 {
                     "source": "app/target/qpm.json",
-                    "target": "app/target/qpm.json"
-                },
-                {
-                    "source": "tests/unittests",
-                    "target": "tests/unittests"
+                    "target": "app/%{ApplicationProjectName}/qpm.json"
                 },
                 {
                     "source": "tests/unittests/app.pro",
@@ -176,10 +159,6 @@
                 {
                     "source": "tests/unittests/main.cpp",
                     "target": "tests/unittests/main.cpp"
-                },
-                {
-                    "source": "tests/unittests/qmltests",
-                    "target": "tests/unittests/qmltests"
                 },
                 {
                     "source": "tests/unittests/qmltests/tst_QmlTests.qml",
