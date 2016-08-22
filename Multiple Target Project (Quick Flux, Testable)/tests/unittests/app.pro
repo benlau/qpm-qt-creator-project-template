@@ -17,8 +17,11 @@ SOURCES += \
     tests.cpp
 
 DEFINES += SRCDIR=\\\\\\"$$PWD/\\\\\\"
+ROOTDIR = $$PWD/../../
 
 include(vendor/vendor.pri)
+include($$ROOTDIR/app/%{ApplicationProjectName}/%{ApplicationProjectName}.pri)
+
 
 DISTFILES += \
     qpm.json \
@@ -26,4 +29,3 @@ DISTFILES += \
 
 HEADERS += \
     tests.h
-
