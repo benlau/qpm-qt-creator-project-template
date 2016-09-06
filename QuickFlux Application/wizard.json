@@ -110,8 +110,8 @@
                     "target": "%{ProjectName}.pri"
                   },
                   {
-                    "source": "app.qrc",
-                    "target": "%{ProjectName}.qrc"
+                    "source": "App/app.qrc",
+                    "target": "%{Package}/%{ProjectName}.qrc"
                   },
                   {
                     "source": "appview.cpp",
@@ -130,8 +130,8 @@
                     "target": "main.cpp"
                   },
                   {
-                    "source": "main.qml",
-                    "target": "main.qml"
+                    "source": "App/main.qml",
+                    "target": "%{Package}/main.qml"
                   },
                   {
                     "source": "qpm.json",
