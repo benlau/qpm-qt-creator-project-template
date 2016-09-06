@@ -13,7 +13,7 @@ AppView::AppView(QObject *parent) : QObject(parent)
 int AppView::exec()
 {
     m_engine.addImportPath("qrc:///");
-    m_engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+    m_engine.load(QUrl(QStringLiteral("qrc:/%{Package}/main.qml")));
 
     QFAppDispatcher* dispatcher = QFAppDispatcher::instance(&m_engine);
     connect(dispatcher,SIGNAL(dispatched(QString,QJSValue)),
