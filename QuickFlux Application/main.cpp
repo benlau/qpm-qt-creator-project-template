@@ -10,7 +10,6 @@ int main(int argc, char *argv[])
     Q_UNUSED(app);
 
     AppView view;
-    view.start();
 
-    return app.exec();
+    return view.exec();
 }

@@ -13,7 +13,7 @@ class AppView : public QObject
 public:
     explicit AppView(QObject *parent = 0);
 
-    void start();
+    int exec();
 
 signals:
 

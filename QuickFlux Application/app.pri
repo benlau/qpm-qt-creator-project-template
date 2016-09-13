@@ -3,7 +3,7 @@ CONFIG   += c++11
 SOURCES += $$PWD/appview.cpp
 
 RESOURCES += \
-    $$PWD/%{Package}/%{ProjectName}.qrc
+    $$PWD/%{ProjectName}.qrc
 
 INCLUDEPATH += $$PWD
 
