@@ -10,7 +10,7 @@ AppView::AppView(QObject *parent) : QObject(parent)
 
 }
 
-int AppView::exec()
+void AppView::start()
 {
     m_engine.addImportPath("qrc:///");
     m_engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
@@ -20,9 +20,6 @@ int AppView::exec()
             this,SLOT(onDispatched(QString,QJSValue)));
 
     dispatcher->dispatch("startApp");
-
-    QCoreApplication* app = QCoreApplication::instance();
-    return app->exec();
 }
 
 void AppView::onDispatched(QString type, QJSValue message)
