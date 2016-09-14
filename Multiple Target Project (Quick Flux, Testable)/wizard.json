@@ -125,8 +125,8 @@
                     "openAsProject": true
                 },
                 {
-                    "source": "app/target/App/app.qrc",
-                    "target": "app/%{ApplicationProjectName}/%{Package}/%{ApplicationProjectName}.qrc"
+                    "source": "app/target/app.qrc",
+                    "target": "app/%{ApplicationProjectName}/%{ApplicationProjectName}.qrc"
                 },
                 {
                     "source": "app/target/appview.cpp",
@@ -143,6 +143,10 @@
                 {
                     "source": "app/target/main.cpp",
                     "target": "app/%{ApplicationProjectName}/main.cpp"
+                },
+                {
+                    "source": "app/target/main.qml",
+                    "target": "app/%{ApplicationProjectName}/main.qml"
                 },
                 {
                     "source": "app/target/qpm.json",
