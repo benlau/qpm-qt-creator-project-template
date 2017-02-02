@@ -16,7 +16,7 @@ SOURCES += \
     main.cpp \
     tests.cpp
 
-DEFINES += SRCDIR=\\\\\\"$$PWD/\\\\\\"
+DEFINES += SRCDIR=\\\\\\"$$PWD/\\\\\\" QUICK_TEST_SOURCE_DIR=\\\\\\"$$PWD/qmltests\\\\\\"
 
 include(vendor/vendor.pri)
 

@@ -4,6 +4,7 @@
 #include <signal.h>
 #include <unistd.h>
 #include <TestRunner>
+#include <QtQuickTest>
 #include "tests.h"
 
 void handleBacktrace(int sig) {
@@ -19,6 +20,11 @@ void handleBacktrace(int sig) {
   exit(1);
 }
 
+// This function do nothing but could make Qt Creator Autotests plugin recognize QuickTests
+namespace AutoTestRegister {
+    QUICK_TEST_MAIN(QuickTests)
+}
+
 int main(int argc, char *argv[])
 {
     signal(SIGSEGV, handleBacktrace);
@@ -29,15 +35,6 @@ int main(int argc, char *argv[])
     runner.addImportPath("qrc:///");
     runner.add<Tests>();
     runner.add(QString(SRCDIR) + "qmltests");
-
-    int waitTime = 100;
-    if (app.arguments().size() != 1) {
-        waitTime = 60000;
-    }
-
-    QVariantMap config;
-    config["waitTime"] = waitTime;
-    runner.setConfig(config);
 
     bool error = runner.exec(app.arguments());
 
