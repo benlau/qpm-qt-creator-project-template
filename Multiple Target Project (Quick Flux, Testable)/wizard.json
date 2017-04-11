@@ -80,10 +80,6 @@
                     "target": "app/%{ApplicationProjectName}/%{Package}/adapters/qmldir"
                 },
                 {
-                    "source": "app/target/App/adapters/StoreAdapter.qml",
-                    "target": "app/%{ApplicationProjectName}/%{Package}/adapters/StoreAdapter.qml"
-                },
-                {
                     "source": "app/target/App/constants/Constants.qml",
                     "target": "app/%{ApplicationProjectName}/%{Package}/constants/Constants.qml"
                 },
@@ -100,20 +96,12 @@
                     "target": "app/%{ApplicationProjectName}/%{Package}/stores/MainStore.qml"
                 },
                 {
+                    "source": "app/target/App/stores/RootStore.qml",
+                    "target": "app/%{ApplicationProjectName}/%{Package}/stores/RootStore.qml"
+                },
+                {
                     "source": "app/target/App/stores/qmldir",
                     "target": "app/%{ApplicationProjectName}/%{Package}/stores/qmldir"
-                },
-                {
-                    "source": "app/target/App/storeworkers/MainStoreWorker.qml",
-                    "target": "app/%{ApplicationProjectName}/%{Package}/storeworkers/MainStoreWorker.qml"
-                },
-                {
-                    "source": "app/target/App/storeworkers/qmldir",
-                    "target": "app/%{ApplicationProjectName}/%{Package}/storeworkers/qmldir"
-                },
-                {
-                    "source": "app/target/App/storeworkers/StoreWorker.qml",
-                    "target": "app/%{ApplicationProjectName}/%{Package}/storeworkers/StoreWorker.qml"
                 },
                 {
                     "source": "app/target/app.pri",

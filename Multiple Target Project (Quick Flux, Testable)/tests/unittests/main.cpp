@@ -19,6 +19,10 @@ void handleBacktrace(int sig) {
   exit(1);
 }
 
+namespace AutoTestRegister {
+    QUICK_TEST_MAIN(QuickTests)
+}
+
 int main(int argc, char *argv[])
 {
     signal(SIGSEGV, handleBacktrace);

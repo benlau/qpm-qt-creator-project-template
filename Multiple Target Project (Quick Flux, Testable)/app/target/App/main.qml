@@ -3,7 +3,6 @@ import QtQuick.Window 2.2
 import QtMultimedia 5.5
 import QtQuick.Controls 1.4
 import "./constants"
-import "./adapters"
 import "./actions"
 import "./stores"
 
@@ -12,9 +11,6 @@ Window {
     visible: false
     width: 480
     height: 640
-
-    StoreAdapter {
-    }
 
     MouseArea {
         anchors.fill: parent
