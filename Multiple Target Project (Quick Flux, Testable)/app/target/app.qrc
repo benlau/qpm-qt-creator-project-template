@@ -2,6 +2,7 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>%{Package}/stores/MainStore.qml</file>
+        <file>%{Package}/stores/RootStore.qml</file>
         <file>%{Package}/stores/qmldir</file>
         <file>%{Package}/actions/AppActions.qml</file>
         <file>%{Package}/actions/ActionTypes.qml</file>

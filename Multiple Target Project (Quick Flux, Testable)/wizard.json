@@ -15,7 +15,8 @@
         { "key": "QtQuickVersion", "value": "%{JS: %{QtVersion}.qtQuickVersion}" },
         { "key": "QtQuickWindowVersion", "value": "%{JS: %{QtVersion}.qtQuickWindowVersion}" },
         { "key": "UiSupport", "value": "%{JS: '%{QtQuickVersion}' !== '2.3' }" },
-        { "key": "IsUiFileInUse", "value": "%{JS: %{UiSupport} && %{QmlUiSplit} }" }
+        { "key": "IsUiFileInUse", "value": "%{JS: %{UiSupport} && %{QmlUiSplit} }" },
+        { "key": "TargetPathBaseName", "value": "%{JS: '%{TargetPath}'.split('/').slice(-1)[0]}" }
     ],
 
     "pages":
@@ -32,17 +33,23 @@
             "data": [
                 {
                     "name": "ApplicationProjectName",
-                    "trDisplayName": "Application Project Name",
+                    "trDisplayName": "Target Application Folder Name",
                     "mandatory": true,
                     "type": "LineEdit",
-                    "data": { "validator": "[a-zA-Z][a-zA-Z0-9]*" }
+                    "data": { 
+			"trText": "%{TargetPathBaseName}",
+			"validator": "[a-zA-Z][a-zA-Z0-9]*" 
+		    }
                 },
                 {
                     "name": "Package",
                     "trDisplayName": "QML Package Name",
                     "mandatory": true,
                     "type": "LineEdit",
-                    "data": { "validator": "[a-zA-Z][a-zA-Z0-9]*" }
+                    "data": { 
+                        "trText": "%{JS: '%{TargetPathBaseName}'.charAt(0).toUpperCase() + '%{TargetPathBaseName}'.slice(1)}",
+ 			"validator": "[a-zA-Z][a-zA-Z0-9]*" 
+		    }
                 }
             ]
         },

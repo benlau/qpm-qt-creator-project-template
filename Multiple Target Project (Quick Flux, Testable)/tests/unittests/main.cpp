@@ -4,6 +4,7 @@
 #include <signal.h>
 #include <unistd.h>
 #include <TestRunner>
+#include <QtQuickTest/quicktest.h>
 #include "tests.h"
 
 void handleBacktrace(int sig) {
