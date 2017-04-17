@@ -76,10 +76,6 @@
                     "target": "app/%{ApplicationProjectName}/%{Package}/actions/qmldir"
                 },
                 {
-                    "source": "app/target/App/adapters/qmldir",
-                    "target": "app/%{ApplicationProjectName}/%{Package}/adapters/qmldir"
-                },
-                {
                     "source": "app/target/App/constants/Constants.qml",
                     "target": "app/%{ApplicationProjectName}/%{Package}/constants/Constants.qml"
                 },
