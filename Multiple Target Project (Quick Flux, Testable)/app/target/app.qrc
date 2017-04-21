@@ -9,5 +9,7 @@
         <file>%{Package}/actions/qmldir</file>
         <file>%{Package}/constants/Constants.qml</file>
         <file>%{Package}/constants/qmldir</file>
+        <file>%{Package}/middlewares/qmldir</file>
+        <file>%{Package}/middlewares/SystemMiddleware.qml</file>
     </qresource>
 </RCC>

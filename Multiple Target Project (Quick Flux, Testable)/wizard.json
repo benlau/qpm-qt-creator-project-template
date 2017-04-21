@@ -91,10 +91,6 @@
                     "target": "app/%{ApplicationProjectName}/%{Package}/constants/qmldir"
                 },
                 {
-                    "source": "app/target/App/main.qml",
-                    "target": "app/%{ApplicationProjectName}/%{Package}/main.qml"
-                },
-                {
                     "source": "app/target/App/stores/MainStore.qml",
                     "target": "app/%{ApplicationProjectName}/%{Package}/stores/MainStore.qml"
                 },
@@ -106,6 +102,17 @@
                     "source": "app/target/App/stores/qmldir",
                     "target": "app/%{ApplicationProjectName}/%{Package}/stores/qmldir"
                 },
+
+                {
+                    "source": "app/target/App/middlewares/qmldir",
+                    "target": "app/%{ApplicationProjectName}/%{Package}/middlewares/qmldir"
+                },
+
+                {
+                    "source": "app/target/App/middlewares/SystemMiddleware.qml",
+                    "target": "app/%{ApplicationProjectName}/%{Package}/middlewares/SystemMiddleware.qml"
+                },
+
                 {
                     "source": "app/target/app.pri",
                     "target": "app/%{ApplicationProjectName}/%{ApplicationProjectName}.pri"
