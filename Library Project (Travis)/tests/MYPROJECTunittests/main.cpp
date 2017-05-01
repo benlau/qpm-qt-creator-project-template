@@ -15,7 +15,7 @@ void handleBacktrace(int sig) {
     size = backtrace(array, 100);
 
     // print out all the frames to stderr
-    fprintf(stderr, "Error: signal %d:\n", sig);
+    fprintf(stderr, "Error: signal %d:\\n", sig);
     backtrace_symbols_fd(array, size, STDERR_FILENO);
     exit(1);
 }

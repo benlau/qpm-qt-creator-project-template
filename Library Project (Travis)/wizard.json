@@ -76,7 +76,8 @@
                 },
                 {
                     "source": "tests/MYPROJECTunittests/MYPROJECTunittests.pro",
-                    "target": "tests/%{ProjectName}unittests/%{ProjectName}unittests.pro"
+                    "target": "tests/%{ProjectName}unittests/%{ProjectName}unittests.pro",
+                    "openAsProject": true
                 },
                 {
                     "source": "tests/MYPROJECTunittests/qmltests/tst_QmlTests.qml",
