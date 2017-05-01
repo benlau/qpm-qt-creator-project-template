@@ -2,16 +2,16 @@
     "version": 1,
     "kind": "project",
     "id": "LibraryProjectTravis",
-    "category": "H.Project",
-    "trDescription": "Creates a library project",
-    "trDisplayName": "Library Project",
+    "category": "G.Library",
+    "trDescription": "Creates a library project with Testable",
+    "trDisplayName": "Library Project with Testable unit test",
     "trDisplayCategory": "Other Project",
     "icon": "../consoleapplication.png",
     "enabled": "%{JS: [ %{Plugins} ].indexOf('QmlProjectManager') >= 0}",
     "options": [
         {
             "key": "ProFileName",
-            "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}', 'pro')}"
+            "value": "%{JS: Util.fileName('tests/%{ProjectName}unittests/%{ProjectName}unittests', 'pro')}"
         },
         {
             "key": "MainQmlFileName",
@@ -56,7 +56,7 @@
                 },
                 {
                     "source": "MYPROJECT.pri",
-                    "target": "MYPROJECT.pri"
+                    "target": "%{ProjectName}.pri"
                 },
                 {
                     "source": "qpm.json",
@@ -68,31 +68,31 @@
                 },
                 {
                     "source": "tests/MYPROJECTunittests/.gitignore",
-                    "target": "tests/MYPROJECTunittests/.gitignore"
+                    "target": "tests/%{ProjectName}unittests/.gitignore"
                 },
                 {
                     "source": "tests/MYPROJECTunittests/main.cpp",
-                    "target": "tests/MYPROJECTunittests/main.cpp"
+                    "target": "tests/%{ProjectName}unittests/main.cpp"
                 },
                 {
                     "source": "tests/MYPROJECTunittests/MYPROJECTunittests.pro",
-                    "target": "tests/MYPROJECTunittests/MYPROJECTunittests.pro"
+                    "target": "tests/%{ProjectName}unittests/%{ProjectName}unittests.pro"
                 },
                 {
                     "source": "tests/MYPROJECTunittests/qmltests/tst_QmlTests.qml",
-                    "target": "tests/MYPROJECTunittests/qmltests/tst_QmlTests.qml"
+                    "target": "tests/%{ProjectName}unittests/qmltests/tst_QmlTests.qml"
                 },
                 {
                     "source": "tests/MYPROJECTunittests/qpm.json",
-                    "target": "tests/MYPROJECTunittests/qpm.json"
+                    "target": "tests/%{ProjectName}unittests/qpm.json"
                 },
                 {
                     "source": "tests/MYPROJECTunittests/tests.cpp",
-                    "target": "tests/MYPROJECTunittests/tests.cpp"
+                    "target": "tests/%{ProjectName}unittests/tests.cpp"
                 },
                 {
                     "source": "tests/MYPROJECTunittests/tests.h",
-                    "target": "tests/MYPROJECTunittests/tests.h"
+                    "target": "tests/%{ProjectName}unittests/tests.h"
                 }
             ]
         }
