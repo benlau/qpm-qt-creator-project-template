@@ -51,6 +51,10 @@
             "typeId": "File",
             "data": [
                 {
+                    "source": ".gitignore",
+                    "target": ".gitignore"
+                },
+                {
                     "source": "LICENSE",
                     "target": "LICENSE"
                 },
@@ -59,8 +63,8 @@
                     "target": "%{ProjectName}.pri"
                 },
                 {
-                    "source": "qpm.json",
-                    "target": "qpm.json"
+                    "source": "MYPROJECT.qrc",
+                    "target": "%{ProjectName}.qrc"
                 },
                 {
                     "source": "README.md",
