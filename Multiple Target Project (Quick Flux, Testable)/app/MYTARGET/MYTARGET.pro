@@ -15,6 +15,5 @@ ROOTDIR = $$PWD/../..
 include(deployment.pri)
 include(vendor/vendor.pri)
 
-DISTFILES += \
-    qpm.json
+DISTFILES +=     qpm.json
 
