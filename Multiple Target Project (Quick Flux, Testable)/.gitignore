@@ -74,5 +74,21 @@ Thumbs.db
 build-*
 vendor
 
-*.properties
+
+# Android
+# -------
+*.idea
+*.build
+.gradle
+local.properties
+gradle.properties
 !gradle-wrapper.jar
+*.iml
+
+# Qt
+# ---
+qmlimport.path
+*.qmlc
+*.jsc
+
+

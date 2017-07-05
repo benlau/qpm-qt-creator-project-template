@@ -82,6 +82,10 @@
             "typeId": "File",
             "data": [
                 {
+                    "source": ".gitignore",
+                    "target": ".gitignore"
+                },
+                {
                     "source": "app/MYTARGET/appview.cpp",
                     "target": "app/%{ApplicationProjectName}/appview.cpp"
                 },
