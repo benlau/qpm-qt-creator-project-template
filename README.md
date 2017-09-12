@@ -7,6 +7,7 @@ Installation
 Mac
 ---
 
-cd [QT_INSTALLATION_PATH]/Qt Creator.app benlau$ cd Contents/Resources/templates/wizards/
-git clone https://github.com/benlau/qpm-qt-creator-project-template.git
-
+```
+  cd [QT_INSTALLATION_PATH]/Qt Creator.app/Contents/Resources/templates/wizards/
+  git clone https://github.com/benlau/qpm-qt-creator-project-template.git
+```
