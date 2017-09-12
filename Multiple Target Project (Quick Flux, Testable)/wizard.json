@@ -126,6 +126,10 @@
                     "target": "app/%{ApplicationProjectName}/%{Package}/constants/qmldir"
                 },
                 {
+                    "source": "app/MYTARGET/MYPACKAGE/MainWindow.qml",
+                    "target": "app/%{ApplicationProjectName}/%{Package}/MainWindow.qml"
+                },
+                {
                     "source": "app/MYTARGET/MYPACKAGE/middlewares/qmldir",
                     "target": "app/%{ApplicationProjectName}/%{Package}/middlewares/qmldir"
                 },
@@ -144,6 +148,10 @@
                 {
                     "source": "app/MYTARGET/MYPACKAGE/stores/RootStore.qml",
                     "target": "app/%{ApplicationProjectName}/%{Package}/stores/RootStore.qml"
+                },
+                {
+                    "source": "app/MYTARGET/MYPACKAGE/uikit/qmldir",
+                    "target": "app/%{ApplicationProjectName}/%{Package}/uikit/qmldir"
                 },
                 {
                     "source": "app/MYTARGET/MYTARGET.pri",

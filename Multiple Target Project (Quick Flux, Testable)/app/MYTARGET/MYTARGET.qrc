@@ -11,5 +11,7 @@
         <file>%{Package}/constants/qmldir</file>
         <file>%{Package}/middlewares/qmldir</file>
         <file>%{Package}/middlewares/SystemMiddleware.qml</file>
+        <file>%{Package}/MainWindow.qml</file>
+        <file>%{Package}/uikit/qmldir</file>
     </qresource>
 </RCC>
