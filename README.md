@@ -1,6 +1,8 @@
 # qpm-qt-creator-project-template
 Qt Creator Project Templates with qpm
 
+**This project is suspended already. It is replaced by [e-fever/e-fever-codebase: A Collection of Project Wizard for Qt Creator](https://github.com/e-fever/e-fever-codebase)**
+
 Installation
 ============
 
